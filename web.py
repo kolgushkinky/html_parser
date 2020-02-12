@@ -31,8 +31,15 @@ def get_url():
             <input value="URL" type="submit" />
         </form>
     <br>
-    <p>{{a}}</p>
-    </div>''', a = dictio)
+    <table>
+%for key, value in wordList.items():
+    <tr>
+        <td>{{key}} </td>
+        <td>{{value}} </td>
+    </tr>
+%end
+</table>
+    </div>''', wordList = dictio)
     
     
 run(host='localhost', port=8080)
